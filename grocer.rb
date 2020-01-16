@@ -64,6 +64,7 @@ def apply_coupons(cart, coupons)
         cart_item_with_coupon = {
           item: 
           price: 
+          count: 
         }
   
 end
