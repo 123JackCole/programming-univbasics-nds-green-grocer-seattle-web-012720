@@ -53,7 +53,7 @@ end
 def apply_coupons(cart, coupons)
   index = 0
   while index < coupons.count
-  
+    
   
   
     
