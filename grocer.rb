@@ -65,6 +65,7 @@ def apply_coupons(cart, coupons)
           item: 
           price: 
           count: 
+          clearance: 
         }
   
 end
