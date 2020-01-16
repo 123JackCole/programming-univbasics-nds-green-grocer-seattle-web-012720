@@ -52,23 +52,7 @@ end
 
 def apply_coupons(cart, coupons)
 
-  # REMEMBER: This method **should** update cart
-  # adds a new key, value pair to the cart hash called 'ITEM NAME W/COUPON'
-  
-  cart_with_coupons = []
-  index = 0
-  #while index < cart.count do
-    
-  #  if (cart[index][:clearance] == true && coupons[])
-      
-      
-      
-  #  end
-    
-  #end
-  
-  p cart
-  p coupons
+
   
   
   
