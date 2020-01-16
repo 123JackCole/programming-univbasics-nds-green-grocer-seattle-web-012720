@@ -1,20 +1,77 @@
 def find_item_by_name_in_collection(name, collection)
-  # Implement me first!
-  #
-  # Consult README for inputs and outputs
+  index = 0
+  while index < collection.count do
+    if collection[index][:item] == name
+      return collection[index]
+    end
+    index += 1
+  end
+  return nil
+end
+
+# adds :count to the item hash
+def item_with_count(item_info)
+  {
+    item: item_info[:item],
+    price: item_info[:price],
+    clearance: item_info[:clearance],
+    count: 0
+  }
 end
 
 def consolidate_cart(cart)
-  # Consult README for inputs and outputs
-  #
-  # REMEMBER: This returns a new Array that represents the cart. Don't merely
-  # change `cart` (i.e. mutate) it. It's easier to return a new thing.
+  
+  new_cart = []
+  
+  outer_index = 0
+  while outer_index < cart.count do
+    
+    # if the item is not in the new cart, it adds the item using item_with_count
+    unless new_cart.include?(cart[outer_index][:item])
+      new_cart << item_with_count(cart[outer_index])
+    end
+    
+    # if the item is in the new cart it increments the count
+    if new_cart.include?(item_with_count(cart[outer_index]))
+      inner_index = 0
+      
+      # finds the correct location in the new_cart array to increment
+      while inner_index < new_cart.count
+        if new_cart[inner_index][:item] == cart[outer_index][:item]
+          new_cart[inner_index][:count] += 1
+        end
+        inner_index += 1
+      end
+
+    end
+    
+    outer_index += 1
+  end
+  new_cart
 end
 
 def apply_coupons(cart, coupons)
-  # Consult README for inputs and outputs
-  #
+
   # REMEMBER: This method **should** update cart
+  # adds a new key, value pair to the cart hash called 'ITEM NAME W/COUPON'
+  
+  cart_with_coupons = []
+  index = 0
+  #while index < cart.count do
+    
+  #  if (cart[index][:clearance] == true && coupons[])
+      
+      
+      
+  #  end
+    
+  #end
+  
+  p cart
+  p coupons
+  
+  
+  
 end
 
 def apply_clearance(cart)
