@@ -61,7 +61,9 @@ def apply_coupons(cart, coupons)
         cart_item_with_coupon[:count] += coupons[index][:num]
         cart_item[:count] -= coupons[index][:num]
       else
-        cart_item_with_coupon
+        cart_item_with_coupon = {
+          
+        }
   
 end
 
