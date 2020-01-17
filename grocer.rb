@@ -23,8 +23,8 @@ def consolidate_cart(cart)
   
   new_cart = []
   
-  outer_index = 0
-  while outer_index < cart.count do
+  counter = 0
+  while counter < cart.count do
     
     # if the item is not in the new cart, it adds the item using item_with_count
     unless new_cart.include?(cart[outer_index][:item])
