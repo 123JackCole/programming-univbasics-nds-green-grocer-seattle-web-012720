@@ -36,6 +36,7 @@ def consolidate_cart(cart)
         clearance: cart[counter][:clearance],
         count: 1
       }
+      new_cart << new_cart_item
     end
     
     unless new_cart.include?(cart[outer_index][:item])
