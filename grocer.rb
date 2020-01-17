@@ -99,7 +99,8 @@ def checkout(cart, coupons)
   # some irritated customers
   
   consolidated_cart = consolidate_cart(cart)
-  discounted_cart = apply_clearance(apply_coupons(consolidated_cart, coupons))
+  couponed_cart = apply_coupons(consolidated_cart, coupons)
+  discounted_cart = apply_clearance(couponed_cart)
   grand_total = 0
   counter = 0
   while counter < discounted_cart.length
