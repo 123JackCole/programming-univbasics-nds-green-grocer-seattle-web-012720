@@ -28,6 +28,7 @@ def consolidate_cart(cart)
     new_cart_item = find_item_by_name_in_collection(cart[counter][:item], new_cart)
     
     if new_cart_item != nil
+        
     unless new_cart.include?(cart[outer_index][:item])
       new_cart << item_with_count(cart[outer_index])
     end
