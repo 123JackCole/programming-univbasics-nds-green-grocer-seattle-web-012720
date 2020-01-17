@@ -38,6 +38,7 @@ def consolidate_cart(cart)
       }
       new_cart << new_cart_item
     end
+    counter += 1
     
     unless new_cart.include?(cart[outer_index][:item])
       new_cart << item_with_count(cart[outer_index])
