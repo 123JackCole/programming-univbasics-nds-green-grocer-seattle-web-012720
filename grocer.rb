@@ -39,25 +39,6 @@ def consolidate_cart(cart)
       new_cart << new_cart_item
     end
     counter += 1
-    
-    unless new_cart.include?(cart[outer_index][:item])
-      new_cart << item_with_count(cart[outer_index])
-    end
-    
-    if new_cart.include?(item_with_count(cart[outer_index]))
-      inner_index = 0
-      
-      # finds the correct location in the new_cart array to increment
-      while inner_index < new_cart.count
-        if new_cart[inner_index][:item] == cart[outer_index][:item]
-          new_cart[inner_index][:count] += 1
-        end
-        inner_index += 1
-      end
-
-    end
-    
-    outer_index += 1
   end
   new_cart
 end
