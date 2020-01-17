@@ -29,11 +29,14 @@ def consolidate_cart(cart)
     
     if new_cart_item != nil
         new_cart_item[:count] += 1
+    else
+      
+    end
+    
     unless new_cart.include?(cart[outer_index][:item])
       new_cart << item_with_count(cart[outer_index])
     end
     
-    # if the item is in the new cart it increments the count
     if new_cart.include?(item_with_count(cart[outer_index]))
       inner_index = 0
       
